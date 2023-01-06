@@ -32,8 +32,6 @@ const baseTemplate = `
         <div class="coveo-result-row" style="margin-top:0;">
             <div class="harness-search-module">
                 <span class="CoveoFieldValue#{moduleClassName}" data-field="@commonmodule" data-text-caption="" data-with-label="false"></span>
-            </div>
-            <div class="harness-search-gen">
                 <span class="CoveoFieldValue" data-field="@categoryname" data-text-caption="" data-with-label="false"></span>
             </div>
         </div>
