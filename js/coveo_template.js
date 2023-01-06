@@ -33,6 +33,9 @@ const baseTemplate = `
             <div class="harness-search-module">
                 <span class="CoveoFieldValue#{moduleClassName}" data-field="@commonmodule" data-text-caption="" data-with-label="false"></span>
             </div>
+            <div class="harness-search-gen">
+                <span class="CoveoFieldValue" data-field="@categoryname" data-text-caption="" data-with-label="false"></span>
+            </div>
         </div>
     </div>
 </div>
@@ -55,6 +58,7 @@ const CoveoFieldValueFF = " CoveoFieldValueFF";
 const CoveoFieldValueCE = " CoveoFieldValueCE";
 const CoveoFieldValueSTO = " CoveoFieldValueSTO";
 const CoveoFieldValueSRM = " CoveoFieldValueSRM";
+const CoveoFieldValuePlatform = " CoveoFieldValuePlatform";
 
 const tagName = "@commonsource";
 const tagNameFirstGenDocs = "@categoryname";
@@ -261,6 +265,36 @@ Coveo.TemplateCache.registerTemplate(
         {
           field: "commonmodule",
           values: ["Service Reliability Management"],
+        },
+      ],
+      mobile: null,
+      role: null,
+    }
+  ),
+  true,
+  true
+);
+
+Coveo.TemplateCache.registerTemplate(
+  "ResultWithImage-Platform",
+  Coveo.HtmlTemplate.fromString(
+    createStringFromTemplate(baseTemplate, {
+      imageCell: withImage,
+      moduleClassName: CoveoFieldValuePlatform,
+      imagePlaceHolder: imagePlaceHolder,
+      tagFieldName: tagName,
+    }),
+    {
+      condition: null,
+      layout: "list",
+      fieldsToMatch: [
+        {
+          field: "featuredimage",
+          values: [],
+        },
+        {
+          field: "commonmodule",
+          values: ["Harness Platform"],
         },
       ],
       mobile: null,
@@ -526,7 +560,37 @@ Coveo.TemplateCache.registerTemplate(
   true
 );
 
-/* ---------- Results Without Image - FirstGen Docs ---------- */
+Coveo.TemplateCache.registerTemplate(
+  "ResultWithoutImage-Platform",
+  Coveo.HtmlTemplate.fromString(
+    createStringFromTemplate(baseTemplate, {
+      imageCell: withoutImage,
+      moduleClassName: CoveoFieldValuePlatform,
+      imagePlaceHolder: withoutImage,
+      tagFieldName: tagName,
+    }),
+    {
+      condition: null,
+      layout: "list",
+      fieldsToMatch: [
+        {
+          field: "uri",
+          values: [],
+        },
+        {
+          field: "commonmodule",
+          values: ["Harness Platform"],
+        },
+      ],
+      mobile: null,
+      role: null,
+    }
+  ),
+  true,
+  true
+);
+
+/* ---------- Results Without Image - FirstGen Docs 
 
 Coveo.TemplateCache.registerTemplate(
   "ResultWithoutImage-FirstGen-Docs",
@@ -557,6 +621,7 @@ Coveo.TemplateCache.registerTemplate(
   true,
   true
 );
+---------- */
 
 // Defult template for results without featured images
 Coveo.TemplateCache.registerTemplate(
