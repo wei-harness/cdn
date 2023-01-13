@@ -18,6 +18,11 @@ const baseTemplate = `
             </div>
             #{imagePlaceHolder}
         </div>
+        <div class="coveo-result-row">
+            <div class="coveo-result-cell">
+                <a class='CoveoPrintableUri'></a>
+            </div>
+        </div>
         <div class="coveo-result-row" style="margin-top:10px;">
             <div class="coveo-result-cell">
                 <span class="CoveoExcerpt"></span>
