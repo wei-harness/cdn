@@ -59,8 +59,14 @@ const CoveoFieldValueCD = " CoveoFieldValueCD";
 const CoveoFieldValueCC = " CoveoFieldValueCC";
 const CoveoFieldValueFF = " CoveoFieldValueFF";
 const CoveoFieldValueCE = " CoveoFieldValueCE";
+const CoveoFieldValueCET = " CoveoFieldValueCET";
 const CoveoFieldValueSTO = " CoveoFieldValueSTO";
 const CoveoFieldValueSRM = " CoveoFieldValueSRM";
+const CoveoFieldValueSEI = " CoveoFieldValueSEI";
+const CoveoFieldValueSSCA = " CoveoFieldValueSSCA";
+const CoveoFieldValueIDP = " CoveoFieldValueIDP";
+const CoveoFieldValueIACM = " CoveoFieldValueIACM";
+const CoveoFieldValueGitness = " CoveoFieldValueGitness";
 const CoveoFieldValuePlatform = " CoveoFieldValuePlatform";
 
 const tagName = "@commonsource";
@@ -208,6 +214,186 @@ Coveo.TemplateCache.registerTemplate(
         {
           field: "commonmodule",
           values: ["Chaos Engineering"],
+        },
+      ],
+      mobile: null,
+      role: null,
+    }
+  ),
+  true,
+  true
+);
+
+Coveo.TemplateCache.registerTemplate(
+  "ResultWithImage-CET",
+  Coveo.HtmlTemplate.fromString(
+    createStringFromTemplate(baseTemplate, {
+      imageCell: withImage,
+      moduleClassName: CoveoFieldValueCET,
+      imagePlaceHolder: imagePlaceHolder,
+      tagFieldName: tagName,
+    }),
+    {
+      condition: null,
+      layout: "list",
+      fieldsToMatch: [
+        {
+          field: "featuredimage",
+          values: [],
+        },
+        {
+          field: "commonmodule",
+          values: ["Continuous Error Tracking"],
+        },
+      ],
+      mobile: null,
+      role: null,
+    }
+  ),
+  true,
+  true
+);
+
+Coveo.TemplateCache.registerTemplate(
+  "ResultWithImage-SEI",
+  Coveo.HtmlTemplate.fromString(
+    createStringFromTemplate(baseTemplate, {
+      imageCell: withImage,
+      moduleClassName: CoveoFieldValueSEI,
+      imagePlaceHolder: imagePlaceHolder,
+      tagFieldName: tagName,
+    }),
+    {
+      condition: null,
+      layout: "list",
+      fieldsToMatch: [
+        {
+          field: "featuredimage",
+          values: [],
+        },
+        {
+          field: "commonmodule",
+          values: ["Software Engineering Insights"],
+        },
+      ],
+      mobile: null,
+      role: null,
+    }
+  ),
+  true,
+  true
+);
+
+Coveo.TemplateCache.registerTemplate(
+  "ResultWithImage-SSCA",
+  Coveo.HtmlTemplate.fromString(
+    createStringFromTemplate(baseTemplate, {
+      imageCell: withImage,
+      moduleClassName: CoveoFieldValueSSCA,
+      imagePlaceHolder: imagePlaceHolder,
+      tagFieldName: tagName,
+    }),
+    {
+      condition: null,
+      layout: "list",
+      fieldsToMatch: [
+        {
+          field: "featuredimage",
+          values: [],
+        },
+        {
+          field: "commonmodule",
+          values: ["Software Supply Chain Assurance"],
+        },
+      ],
+      mobile: null,
+      role: null,
+    }
+  ),
+  true,
+  true
+);
+
+Coveo.TemplateCache.registerTemplate(
+  "ResultWithImage-IDP",
+  Coveo.HtmlTemplate.fromString(
+    createStringFromTemplate(baseTemplate, {
+      imageCell: withImage,
+      moduleClassName: CoveoFieldValueIDP,
+      imagePlaceHolder: imagePlaceHolder,
+      tagFieldName: tagName,
+    }),
+    {
+      condition: null,
+      layout: "list",
+      fieldsToMatch: [
+        {
+          field: "featuredimage",
+          values: [],
+        },
+        {
+          field: "commonmodule",
+          values: ["Internal Developer Portal"],
+        },
+      ],
+      mobile: null,
+      role: null,
+    }
+  ),
+  true,
+  true
+);
+
+Coveo.TemplateCache.registerTemplate(
+  "ResultWithImage-IACM",
+  Coveo.HtmlTemplate.fromString(
+    createStringFromTemplate(baseTemplate, {
+      imageCell: withImage,
+      moduleClassName: CoveoFieldValueIACM,
+      imagePlaceHolder: imagePlaceHolder,
+      tagFieldName: tagName,
+    }),
+    {
+      condition: null,
+      layout: "list",
+      fieldsToMatch: [
+        {
+          field: "featuredimage",
+          values: [],
+        },
+        {
+          field: "commonmodule",
+          values: ["Infrastructure as Code Management"],
+        },
+      ],
+      mobile: null,
+      role: null,
+    }
+  ),
+  true,
+  true
+);
+
+Coveo.TemplateCache.registerTemplate(
+  "ResultWithImage-Gitness",
+  Coveo.HtmlTemplate.fromString(
+    createStringFromTemplate(baseTemplate, {
+      imageCell: withImage,
+      moduleClassName: CoveoFieldValueGitness,
+      imagePlaceHolder: imagePlaceHolder,
+      tagFieldName: tagName,
+    }),
+    {
+      condition: null,
+      layout: "list",
+      fieldsToMatch: [
+        {
+          field: "featuredimage",
+          values: [],
+        },
+        {
+          field: "commonmodule",
+          values: ["Gitness"],
         },
       ],
       mobile: null,
@@ -493,6 +679,186 @@ Coveo.TemplateCache.registerTemplate(
         {
           field: "commonmodule",
           values: ["Chaos Engineering"],
+        },
+      ],
+      mobile: null,
+      role: null,
+    }
+  ),
+  true,
+  true
+);
+
+Coveo.TemplateCache.registerTemplate(
+  "ResultWithoutImage-CET",
+  Coveo.HtmlTemplate.fromString(
+    createStringFromTemplate(baseTemplate, {
+      imageCell: withoutImage,
+      moduleClassName: CoveoFieldValueCET,
+      imagePlaceHolder: withoutImage,
+      tagFieldName: tagName,
+    }),
+    {
+      condition: null,
+      layout: "list",
+      fieldsToMatch: [
+        {
+          field: "uri",
+          values: [],
+        },
+        {
+          field: "commonmodule",
+          values: ["Continuous Error Tracking"],
+        },
+      ],
+      mobile: null,
+      role: null,
+    }
+  ),
+  true,
+  true
+);
+
+Coveo.TemplateCache.registerTemplate(
+  "ResultWithoutImage-SEI",
+  Coveo.HtmlTemplate.fromString(
+    createStringFromTemplate(baseTemplate, {
+      imageCell: withoutImage,
+      moduleClassName: CoveoFieldValueSEI,
+      imagePlaceHolder: withoutImage,
+      tagFieldName: tagName,
+    }),
+    {
+      condition: null,
+      layout: "list",
+      fieldsToMatch: [
+        {
+          field: "uri",
+          values: [],
+        },
+        {
+          field: "commonmodule",
+          values: ["Software Engineering Insights"],
+        },
+      ],
+      mobile: null,
+      role: null,
+    }
+  ),
+  true,
+  true
+);
+
+Coveo.TemplateCache.registerTemplate(
+  "ResultWithoutImage-SSCA",
+  Coveo.HtmlTemplate.fromString(
+    createStringFromTemplate(baseTemplate, {
+      imageCell: withoutImage,
+      moduleClassName: CoveoFieldValueSSCA,
+      imagePlaceHolder: withoutImage,
+      tagFieldName: tagName,
+    }),
+    {
+      condition: null,
+      layout: "list",
+      fieldsToMatch: [
+        {
+          field: "uri",
+          values: [],
+        },
+        {
+          field: "commonmodule",
+          values: ["Software Supply Chain Assurance"],
+        },
+      ],
+      mobile: null,
+      role: null,
+    }
+  ),
+  true,
+  true
+);
+
+Coveo.TemplateCache.registerTemplate(
+  "ResultWithoutImage-IDP",
+  Coveo.HtmlTemplate.fromString(
+    createStringFromTemplate(baseTemplate, {
+      imageCell: withoutImage,
+      moduleClassName: CoveoFieldValueIDP,
+      imagePlaceHolder: withoutImage,
+      tagFieldName: tagName,
+    }),
+    {
+      condition: null,
+      layout: "list",
+      fieldsToMatch: [
+        {
+          field: "uri",
+          values: [],
+        },
+        {
+          field: "commonmodule",
+          values: ["Internal Developer Portal"],
+        },
+      ],
+      mobile: null,
+      role: null,
+    }
+  ),
+  true,
+  true
+);
+
+Coveo.TemplateCache.registerTemplate(
+  "ResultWithoutImage-IACM",
+  Coveo.HtmlTemplate.fromString(
+    createStringFromTemplate(baseTemplate, {
+      imageCell: withoutImage,
+      moduleClassName: CoveoFieldValueIACM,
+      imagePlaceHolder: withoutImage,
+      tagFieldName: tagName,
+    }),
+    {
+      condition: null,
+      layout: "list",
+      fieldsToMatch: [
+        {
+          field: "uri",
+          values: [],
+        },
+        {
+          field: "commonmodule",
+          values: ["Infrastructure as Code Management"],
+        },
+      ],
+      mobile: null,
+      role: null,
+    }
+  ),
+  true,
+  true
+);
+
+Coveo.TemplateCache.registerTemplate(
+  "ResultWithoutImage-Gitness",
+  Coveo.HtmlTemplate.fromString(
+    createStringFromTemplate(baseTemplate, {
+      imageCell: withoutImage,
+      moduleClassName: CoveoFieldValueGitness,
+      imagePlaceHolder: withoutImage,
+      tagFieldName: tagName,
+    }),
+    {
+      condition: null,
+      layout: "list",
+      fieldsToMatch: [
+        {
+          field: "uri",
+          values: [],
+        },
+        {
+          field: "commonmodule",
+          values: ["Gitness"],
         },
       ],
       mobile: null,
