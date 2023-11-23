@@ -1,7 +1,7 @@
 const regexp = /#{([^{]+)}/g;
 function createStringFromTemplate(str, rplc) {
   return str.replace(regexp, function (ignore, key) {
-    return (key = rplc[key]) == null ? "" : key;
+    return (key = rplc[key]) == null ? '' : key;
   });
 }
 const baseTemplate = `
@@ -48,34 +48,38 @@ const withImage = `
     <span class="CoveoFieldValue" data-field="@featuredimage" data-helper="image" data-html-value="true"></span>
 </div>
 `;
-const withoutImage = "";
+const withoutImage = '';
 const imagePlaceHolder = `
 <div class="coveo-result-cell-image">
 </div>
 `;
-const CoveoFieldValue = "";
-const CoveoFieldValueCI = " CoveoFieldValueCI";
-const CoveoFieldValueCD = " CoveoFieldValueCD";
-const CoveoFieldValueCC = " CoveoFieldValueCC";
-const CoveoFieldValueFF = " CoveoFieldValueFF";
-const CoveoFieldValueCE = " CoveoFieldValueCE";
-const CoveoFieldValueCET = " CoveoFieldValueCET";
-const CoveoFieldValueSTO = " CoveoFieldValueSTO";
-const CoveoFieldValueSRM = " CoveoFieldValueSRM";
-const CoveoFieldValueSEI = " CoveoFieldValueSEI";
-const CoveoFieldValueSSCA = " CoveoFieldValueSSCA";
-const CoveoFieldValueIDP = " CoveoFieldValueIDP";
-const CoveoFieldValueIACM = " CoveoFieldValueIACM";
-const CoveoFieldValueGitness = " CoveoFieldValueGitness";
-const CoveoFieldValuePlatform = " CoveoFieldValuePlatform";
+const CoveoFieldValue = '';
+const CoveoFieldValueCI = ' CoveoFieldValueCI';
+const CoveoFieldValueCD = ' CoveoFieldValueCD';
+const CoveoFieldValueCC = ' CoveoFieldValueCC';
+const CoveoFieldValueFF = ' CoveoFieldValueFF';
+const CoveoFieldValueCE = ' CoveoFieldValueCE';
+const CoveoFieldValueCET = ' CoveoFieldValueCET';
+const CoveoFieldValueSTO = ' CoveoFieldValueSTO';
+const CoveoFieldValueSRM = ' CoveoFieldValueSRM';
+const CoveoFieldValueSEI = ' CoveoFieldValueSEI';
+const CoveoFieldValueSSCA = ' CoveoFieldValueSSCA';
+const CoveoFieldValueIDP = ' CoveoFieldValueIDP';
+const CoveoFieldValueIACM = ' CoveoFieldValueIACM';
+const CoveoFieldValueGitness = ' CoveoFieldValueGitness';
+const CoveoFieldValueCR = ' CoveoFieldValueCR';
+const CoveoFieldValuePlatform = ' CoveoFieldValuePlatform';
 
-const tagName = "@commonsource";
-const tagNameFirstGenDocs = "@categoryname";
+const CoveoFieldValueFirstGen = ' CoveoFieldValueFirstGen';
+const CoveoFieldValueNextGen = ' CoveoFieldValueNextGen';
+
+const tagName = '@commonsource';
+const tagNameFirstGenDocs = '@categoryname';
 
 /* ---------- Results Without featured Images ---------- */
 
 Coveo.TemplateCache.registerTemplate(
-  "ResultWithImage-CI",
+  'ResultWithImage-CI',
   Coveo.HtmlTemplate.fromString(
     createStringFromTemplate(baseTemplate, {
       imageCell: withImage,
@@ -85,15 +89,15 @@ Coveo.TemplateCache.registerTemplate(
     }),
     {
       condition: null,
-      layout: "list",
+      layout: 'list',
       fieldsToMatch: [
         {
-          field: "featuredimage",
+          field: 'featuredimage',
           values: [],
         },
         {
-          field: "commonmodule",
-          values: ["Continuous Integration"],
+          field: 'commonmodule',
+          values: ['Continuous Integration'],
         },
       ],
       mobile: null,
@@ -105,7 +109,7 @@ Coveo.TemplateCache.registerTemplate(
 );
 
 Coveo.TemplateCache.registerTemplate(
-  "ResultWithImage-CD",
+  'ResultWithImage-CD',
   Coveo.HtmlTemplate.fromString(
     createStringFromTemplate(baseTemplate, {
       imageCell: withImage,
@@ -115,15 +119,15 @@ Coveo.TemplateCache.registerTemplate(
     }),
     {
       condition: null,
-      layout: "list",
+      layout: 'list',
       fieldsToMatch: [
         {
-          field: "featuredimage",
+          field: 'featuredimage',
           values: [],
         },
         {
-          field: "commonmodule",
-          values: ["Continuous Delivery"],
+          field: 'commonmodule',
+          values: ['Continuous Delivery'],
         },
       ],
       mobile: null,
@@ -135,7 +139,7 @@ Coveo.TemplateCache.registerTemplate(
 );
 
 Coveo.TemplateCache.registerTemplate(
-  "ResultWithImage-CC",
+  'ResultWithImage-CC',
   Coveo.HtmlTemplate.fromString(
     createStringFromTemplate(baseTemplate, {
       imageCell: withImage,
@@ -145,15 +149,15 @@ Coveo.TemplateCache.registerTemplate(
     }),
     {
       condition: null,
-      layout: "list",
+      layout: 'list',
       fieldsToMatch: [
         {
-          field: "featuredimage",
+          field: 'featuredimage',
           values: [],
         },
         {
-          field: "commonmodule",
-          values: ["Cloud Cost Management"],
+          field: 'commonmodule',
+          values: ['Cloud Cost Management'],
         },
       ],
       mobile: null,
@@ -165,7 +169,7 @@ Coveo.TemplateCache.registerTemplate(
 );
 
 Coveo.TemplateCache.registerTemplate(
-  "ResultWithImage-FF",
+  'ResultWithImage-FF',
   Coveo.HtmlTemplate.fromString(
     createStringFromTemplate(baseTemplate, {
       imageCell: withImage,
@@ -175,15 +179,15 @@ Coveo.TemplateCache.registerTemplate(
     }),
     {
       condition: null,
-      layout: "list",
+      layout: 'list',
       fieldsToMatch: [
         {
-          field: "featuredimage",
+          field: 'featuredimage',
           values: [],
         },
         {
-          field: "commonmodule",
-          values: ["Feature Flags"],
+          field: 'commonmodule',
+          values: ['Feature Flags'],
         },
       ],
       mobile: null,
@@ -195,7 +199,7 @@ Coveo.TemplateCache.registerTemplate(
 );
 
 Coveo.TemplateCache.registerTemplate(
-  "ResultWithImage-CE",
+  'ResultWithImage-CE',
   Coveo.HtmlTemplate.fromString(
     createStringFromTemplate(baseTemplate, {
       imageCell: withImage,
@@ -205,15 +209,15 @@ Coveo.TemplateCache.registerTemplate(
     }),
     {
       condition: null,
-      layout: "list",
+      layout: 'list',
       fieldsToMatch: [
         {
-          field: "featuredimage",
+          field: 'featuredimage',
           values: [],
         },
         {
-          field: "commonmodule",
-          values: ["Chaos Engineering"],
+          field: 'commonmodule',
+          values: ['Chaos Engineering'],
         },
       ],
       mobile: null,
@@ -225,7 +229,7 @@ Coveo.TemplateCache.registerTemplate(
 );
 
 Coveo.TemplateCache.registerTemplate(
-  "ResultWithImage-CET",
+  'ResultWithImage-CET',
   Coveo.HtmlTemplate.fromString(
     createStringFromTemplate(baseTemplate, {
       imageCell: withImage,
@@ -235,15 +239,15 @@ Coveo.TemplateCache.registerTemplate(
     }),
     {
       condition: null,
-      layout: "list",
+      layout: 'list',
       fieldsToMatch: [
         {
-          field: "featuredimage",
+          field: 'featuredimage',
           values: [],
         },
         {
-          field: "commonmodule",
-          values: ["Continuous Error Tracking"],
+          field: 'commonmodule',
+          values: ['Continuous Error Tracking'],
         },
       ],
       mobile: null,
@@ -255,7 +259,7 @@ Coveo.TemplateCache.registerTemplate(
 );
 
 Coveo.TemplateCache.registerTemplate(
-  "ResultWithImage-SEI",
+  'ResultWithImage-SEI',
   Coveo.HtmlTemplate.fromString(
     createStringFromTemplate(baseTemplate, {
       imageCell: withImage,
@@ -265,15 +269,15 @@ Coveo.TemplateCache.registerTemplate(
     }),
     {
       condition: null,
-      layout: "list",
+      layout: 'list',
       fieldsToMatch: [
         {
-          field: "featuredimage",
+          field: 'featuredimage',
           values: [],
         },
         {
-          field: "commonmodule",
-          values: ["Software Engineering Insights"],
+          field: 'commonmodule',
+          values: ['Software Engineering Insights'],
         },
       ],
       mobile: null,
@@ -285,7 +289,7 @@ Coveo.TemplateCache.registerTemplate(
 );
 
 Coveo.TemplateCache.registerTemplate(
-  "ResultWithImage-SSCA",
+  'ResultWithImage-SSCA',
   Coveo.HtmlTemplate.fromString(
     createStringFromTemplate(baseTemplate, {
       imageCell: withImage,
@@ -295,15 +299,15 @@ Coveo.TemplateCache.registerTemplate(
     }),
     {
       condition: null,
-      layout: "list",
+      layout: 'list',
       fieldsToMatch: [
         {
-          field: "featuredimage",
+          field: 'featuredimage',
           values: [],
         },
         {
-          field: "commonmodule",
-          values: ["Software Supply Chain Assurance"],
+          field: 'commonmodule',
+          values: ['Software Supply Chain Assurance'],
         },
       ],
       mobile: null,
@@ -315,7 +319,7 @@ Coveo.TemplateCache.registerTemplate(
 );
 
 Coveo.TemplateCache.registerTemplate(
-  "ResultWithImage-IDP",
+  'ResultWithImage-IDP',
   Coveo.HtmlTemplate.fromString(
     createStringFromTemplate(baseTemplate, {
       imageCell: withImage,
@@ -325,15 +329,15 @@ Coveo.TemplateCache.registerTemplate(
     }),
     {
       condition: null,
-      layout: "list",
+      layout: 'list',
       fieldsToMatch: [
         {
-          field: "featuredimage",
+          field: 'featuredimage',
           values: [],
         },
         {
-          field: "commonmodule",
-          values: ["Internal Developer Portal"],
+          field: 'commonmodule',
+          values: ['Internal Developer Portal'],
         },
       ],
       mobile: null,
@@ -345,7 +349,7 @@ Coveo.TemplateCache.registerTemplate(
 );
 
 Coveo.TemplateCache.registerTemplate(
-  "ResultWithImage-IACM",
+  'ResultWithImage-IACM',
   Coveo.HtmlTemplate.fromString(
     createStringFromTemplate(baseTemplate, {
       imageCell: withImage,
@@ -355,15 +359,15 @@ Coveo.TemplateCache.registerTemplate(
     }),
     {
       condition: null,
-      layout: "list",
+      layout: 'list',
       fieldsToMatch: [
         {
-          field: "featuredimage",
+          field: 'featuredimage',
           values: [],
         },
         {
-          field: "commonmodule",
-          values: ["Infrastructure as Code Management"],
+          field: 'commonmodule',
+          values: ['Infrastructure as Code Management'],
         },
       ],
       mobile: null,
@@ -375,7 +379,7 @@ Coveo.TemplateCache.registerTemplate(
 );
 
 Coveo.TemplateCache.registerTemplate(
-  "ResultWithImage-Gitness",
+  'ResultWithImage-Gitness',
   Coveo.HtmlTemplate.fromString(
     createStringFromTemplate(baseTemplate, {
       imageCell: withImage,
@@ -385,15 +389,15 @@ Coveo.TemplateCache.registerTemplate(
     }),
     {
       condition: null,
-      layout: "list",
+      layout: 'list',
       fieldsToMatch: [
         {
-          field: "featuredimage",
+          field: 'featuredimage',
           values: [],
         },
         {
-          field: "commonmodule",
-          values: ["Gitness"],
+          field: 'commonmodule',
+          values: ['Gitness'],
         },
       ],
       mobile: null,
@@ -405,7 +409,37 @@ Coveo.TemplateCache.registerTemplate(
 );
 
 Coveo.TemplateCache.registerTemplate(
-  "ResultWithImage-STO",
+  'ResultWithImage-CR',
+  Coveo.HtmlTemplate.fromString(
+    createStringFromTemplate(baseTemplate, {
+      imageCell: withImage,
+      moduleClassName: CoveoFieldValueCR,
+      imagePlaceHolder: imagePlaceHolder,
+      tagFieldName: tagName,
+    }),
+    {
+      condition: null,
+      layout: 'list',
+      fieldsToMatch: [
+        {
+          field: 'featuredimage',
+          values: [],
+        },
+        {
+          field: 'commonmodule',
+          values: ['Code Repository'],
+        },
+      ],
+      mobile: null,
+      role: null,
+    }
+  ),
+  true,
+  true
+);
+
+Coveo.TemplateCache.registerTemplate(
+  'ResultWithImage-STO',
   Coveo.HtmlTemplate.fromString(
     createStringFromTemplate(baseTemplate, {
       imageCell: withImage,
@@ -415,15 +449,15 @@ Coveo.TemplateCache.registerTemplate(
     }),
     {
       condition: null,
-      layout: "list",
+      layout: 'list',
       fieldsToMatch: [
         {
-          field: "featuredimage",
+          field: 'featuredimage',
           values: [],
         },
         {
-          field: "commonmodule",
-          values: ["Security Testing Orchestration"],
+          field: 'commonmodule',
+          values: ['Security Testing Orchestration'],
         },
       ],
       mobile: null,
@@ -435,7 +469,7 @@ Coveo.TemplateCache.registerTemplate(
 );
 
 Coveo.TemplateCache.registerTemplate(
-  "ResultWithImage-SRM",
+  'ResultWithImage-SRM',
   Coveo.HtmlTemplate.fromString(
     createStringFromTemplate(baseTemplate, {
       imageCell: withImage,
@@ -445,15 +479,15 @@ Coveo.TemplateCache.registerTemplate(
     }),
     {
       condition: null,
-      layout: "list",
+      layout: 'list',
       fieldsToMatch: [
         {
-          field: "featuredimage",
+          field: 'featuredimage',
           values: [],
         },
         {
-          field: "commonmodule",
-          values: ["Service Reliability Management"],
+          field: 'commonmodule',
+          values: ['Service Reliability Management'],
         },
       ],
       mobile: null,
@@ -465,7 +499,7 @@ Coveo.TemplateCache.registerTemplate(
 );
 
 Coveo.TemplateCache.registerTemplate(
-  "ResultWithImage-Platform",
+  'ResultWithImage-Platform',
   Coveo.HtmlTemplate.fromString(
     createStringFromTemplate(baseTemplate, {
       imageCell: withImage,
@@ -475,15 +509,47 @@ Coveo.TemplateCache.registerTemplate(
     }),
     {
       condition: null,
-      layout: "list",
+      layout: 'list',
       fieldsToMatch: [
         {
-          field: "featuredimage",
+          field: 'featuredimage',
           values: [],
         },
         {
-          field: "commonmodule",
-          values: ["Harness Platform"],
+          field: 'commonmodule',
+          values: ['Harness Platform'],
+        },
+      ],
+      mobile: null,
+      role: null,
+    }
+  ),
+  true,
+  true
+);
+
+/* @categoryname with image */
+
+Coveo.TemplateCache.registerTemplate(
+  'ResultWithImage-FirstGen',
+  Coveo.HtmlTemplate.fromString(
+    createStringFromTemplate(baseTemplate, {
+      imageCell: withImage,
+      moduleClassName: CoveoFieldValueFirstGen,
+      imagePlaceHolder: imagePlaceHolder,
+      tagFieldName: tagName,
+    }),
+    {
+      condition: null,
+      layout: 'list',
+      fieldsToMatch: [
+        {
+          field: 'featuredimage',
+          values: [],
+        },
+        {
+          field: 'categoryname',
+          values: ['FirstGen Docs'],
         },
       ],
       mobile: null,
@@ -496,7 +562,7 @@ Coveo.TemplateCache.registerTemplate(
 
 // Defult template for results with featured images
 Coveo.TemplateCache.registerTemplate(
-  "ResultWithImage",
+  'ResultWithImage',
   Coveo.HtmlTemplate.fromString(
     createStringFromTemplate(baseTemplate, {
       imageCell: withImage,
@@ -506,7 +572,7 @@ Coveo.TemplateCache.registerTemplate(
     }),
     {
       condition: null,
-      layout: "list",
+      layout: 'list',
       //   fieldsToMatch: [
       //     {
       //       field: "source",
@@ -525,7 +591,7 @@ Coveo.TemplateCache.registerTemplate(
       //   ],
       fieldsToMatch: [
         {
-          field: "featuredimage",
+          field: 'featuredimage',
           values: [],
         },
       ],
@@ -540,7 +606,7 @@ Coveo.TemplateCache.registerTemplate(
 /* ---------- Results Without featured Images ---------- */
 
 Coveo.TemplateCache.registerTemplate(
-  "ResultWithoutImage-CI",
+  'ResultWithoutImage-CI',
   Coveo.HtmlTemplate.fromString(
     createStringFromTemplate(baseTemplate, {
       imageCell: withoutImage,
@@ -550,15 +616,15 @@ Coveo.TemplateCache.registerTemplate(
     }),
     {
       condition: null,
-      layout: "list",
+      layout: 'list',
       fieldsToMatch: [
         {
-          field: "uri",
+          field: 'uri',
           values: [],
         },
         {
-          field: "commonmodule",
-          values: ["Continuous Integration"],
+          field: 'commonmodule',
+          values: ['Continuous Integration'],
         },
       ],
       mobile: null,
@@ -570,7 +636,7 @@ Coveo.TemplateCache.registerTemplate(
 );
 
 Coveo.TemplateCache.registerTemplate(
-  "ResultWithoutImage-CD",
+  'ResultWithoutImage-CD',
   Coveo.HtmlTemplate.fromString(
     createStringFromTemplate(baseTemplate, {
       imageCell: withoutImage,
@@ -580,15 +646,15 @@ Coveo.TemplateCache.registerTemplate(
     }),
     {
       condition: null,
-      layout: "list",
+      layout: 'list',
       fieldsToMatch: [
         {
-          field: "uri",
+          field: 'uri',
           values: [],
         },
         {
-          field: "commonmodule",
-          values: ["Continuous Delivery"],
+          field: 'commonmodule',
+          values: ['Continuous Delivery'],
         },
       ],
       mobile: null,
@@ -600,7 +666,7 @@ Coveo.TemplateCache.registerTemplate(
 );
 
 Coveo.TemplateCache.registerTemplate(
-  "ResultWithoutImage-CC",
+  'ResultWithoutImage-CC',
   Coveo.HtmlTemplate.fromString(
     createStringFromTemplate(baseTemplate, {
       imageCell: withoutImage,
@@ -610,15 +676,15 @@ Coveo.TemplateCache.registerTemplate(
     }),
     {
       condition: null,
-      layout: "list",
+      layout: 'list',
       fieldsToMatch: [
         {
-          field: "uri",
+          field: 'uri',
           values: [],
         },
         {
-          field: "commonmodule",
-          values: ["Cloud Cost Management"],
+          field: 'commonmodule',
+          values: ['Cloud Cost Management'],
         },
       ],
       mobile: null,
@@ -630,7 +696,7 @@ Coveo.TemplateCache.registerTemplate(
 );
 
 Coveo.TemplateCache.registerTemplate(
-  "ResultWithoutImage-FF",
+  'ResultWithoutImage-FF',
   Coveo.HtmlTemplate.fromString(
     createStringFromTemplate(baseTemplate, {
       imageCell: withoutImage,
@@ -640,15 +706,15 @@ Coveo.TemplateCache.registerTemplate(
     }),
     {
       condition: null,
-      layout: "list",
+      layout: 'list',
       fieldsToMatch: [
         {
-          field: "uri",
+          field: 'uri',
           values: [],
         },
         {
-          field: "commonmodule",
-          values: ["Feature Flags"],
+          field: 'commonmodule',
+          values: ['Feature Flags'],
         },
       ],
       mobile: null,
@@ -660,7 +726,7 @@ Coveo.TemplateCache.registerTemplate(
 );
 
 Coveo.TemplateCache.registerTemplate(
-  "ResultWithoutImage-CE",
+  'ResultWithoutImage-CE',
   Coveo.HtmlTemplate.fromString(
     createStringFromTemplate(baseTemplate, {
       imageCell: withoutImage,
@@ -670,15 +736,15 @@ Coveo.TemplateCache.registerTemplate(
     }),
     {
       condition: null,
-      layout: "list",
+      layout: 'list',
       fieldsToMatch: [
         {
-          field: "uri",
+          field: 'uri',
           values: [],
         },
         {
-          field: "commonmodule",
-          values: ["Chaos Engineering"],
+          field: 'commonmodule',
+          values: ['Chaos Engineering'],
         },
       ],
       mobile: null,
@@ -690,7 +756,7 @@ Coveo.TemplateCache.registerTemplate(
 );
 
 Coveo.TemplateCache.registerTemplate(
-  "ResultWithoutImage-CET",
+  'ResultWithoutImage-CET',
   Coveo.HtmlTemplate.fromString(
     createStringFromTemplate(baseTemplate, {
       imageCell: withoutImage,
@@ -700,15 +766,15 @@ Coveo.TemplateCache.registerTemplate(
     }),
     {
       condition: null,
-      layout: "list",
+      layout: 'list',
       fieldsToMatch: [
         {
-          field: "uri",
+          field: 'uri',
           values: [],
         },
         {
-          field: "commonmodule",
-          values: ["Continuous Error Tracking"],
+          field: 'commonmodule',
+          values: ['Continuous Error Tracking'],
         },
       ],
       mobile: null,
@@ -720,7 +786,7 @@ Coveo.TemplateCache.registerTemplate(
 );
 
 Coveo.TemplateCache.registerTemplate(
-  "ResultWithoutImage-SEI",
+  'ResultWithoutImage-SEI',
   Coveo.HtmlTemplate.fromString(
     createStringFromTemplate(baseTemplate, {
       imageCell: withoutImage,
@@ -730,15 +796,15 @@ Coveo.TemplateCache.registerTemplate(
     }),
     {
       condition: null,
-      layout: "list",
+      layout: 'list',
       fieldsToMatch: [
         {
-          field: "uri",
+          field: 'uri',
           values: [],
         },
         {
-          field: "commonmodule",
-          values: ["Software Engineering Insights"],
+          field: 'commonmodule',
+          values: ['Software Engineering Insights'],
         },
       ],
       mobile: null,
@@ -750,7 +816,7 @@ Coveo.TemplateCache.registerTemplate(
 );
 
 Coveo.TemplateCache.registerTemplate(
-  "ResultWithoutImage-SSCA",
+  'ResultWithoutImage-SSCA',
   Coveo.HtmlTemplate.fromString(
     createStringFromTemplate(baseTemplate, {
       imageCell: withoutImage,
@@ -760,15 +826,15 @@ Coveo.TemplateCache.registerTemplate(
     }),
     {
       condition: null,
-      layout: "list",
+      layout: 'list',
       fieldsToMatch: [
         {
-          field: "uri",
+          field: 'uri',
           values: [],
         },
         {
-          field: "commonmodule",
-          values: ["Software Supply Chain Assurance"],
+          field: 'commonmodule',
+          values: ['Software Supply Chain Assurance'],
         },
       ],
       mobile: null,
@@ -780,7 +846,7 @@ Coveo.TemplateCache.registerTemplate(
 );
 
 Coveo.TemplateCache.registerTemplate(
-  "ResultWithoutImage-IDP",
+  'ResultWithoutImage-IDP',
   Coveo.HtmlTemplate.fromString(
     createStringFromTemplate(baseTemplate, {
       imageCell: withoutImage,
@@ -790,15 +856,15 @@ Coveo.TemplateCache.registerTemplate(
     }),
     {
       condition: null,
-      layout: "list",
+      layout: 'list',
       fieldsToMatch: [
         {
-          field: "uri",
+          field: 'uri',
           values: [],
         },
         {
-          field: "commonmodule",
-          values: ["Internal Developer Portal"],
+          field: 'commonmodule',
+          values: ['Internal Developer Portal'],
         },
       ],
       mobile: null,
@@ -810,7 +876,7 @@ Coveo.TemplateCache.registerTemplate(
 );
 
 Coveo.TemplateCache.registerTemplate(
-  "ResultWithoutImage-IACM",
+  'ResultWithoutImage-IACM',
   Coveo.HtmlTemplate.fromString(
     createStringFromTemplate(baseTemplate, {
       imageCell: withoutImage,
@@ -820,15 +886,15 @@ Coveo.TemplateCache.registerTemplate(
     }),
     {
       condition: null,
-      layout: "list",
+      layout: 'list',
       fieldsToMatch: [
         {
-          field: "uri",
+          field: 'uri',
           values: [],
         },
         {
-          field: "commonmodule",
-          values: ["Infrastructure as Code Management"],
+          field: 'commonmodule',
+          values: ['Infrastructure as Code Management'],
         },
       ],
       mobile: null,
@@ -840,7 +906,7 @@ Coveo.TemplateCache.registerTemplate(
 );
 
 Coveo.TemplateCache.registerTemplate(
-  "ResultWithoutImage-Gitness",
+  'ResultWithoutImage-Gitness',
   Coveo.HtmlTemplate.fromString(
     createStringFromTemplate(baseTemplate, {
       imageCell: withoutImage,
@@ -850,15 +916,15 @@ Coveo.TemplateCache.registerTemplate(
     }),
     {
       condition: null,
-      layout: "list",
+      layout: 'list',
       fieldsToMatch: [
         {
-          field: "uri",
+          field: 'uri',
           values: [],
         },
         {
-          field: "commonmodule",
-          values: ["Gitness"],
+          field: 'commonmodule',
+          values: ['Gitness'],
         },
       ],
       mobile: null,
@@ -870,7 +936,37 @@ Coveo.TemplateCache.registerTemplate(
 );
 
 Coveo.TemplateCache.registerTemplate(
-  "ResultWithoutImage-STO",
+  'ResultWithoutImage-CR',
+  Coveo.HtmlTemplate.fromString(
+    createStringFromTemplate(baseTemplate, {
+      imageCell: withoutImage,
+      moduleClassName: CoveoFieldValueCR,
+      imagePlaceHolder: withoutImage,
+      tagFieldName: tagName,
+    }),
+    {
+      condition: null,
+      layout: 'list',
+      fieldsToMatch: [
+        {
+          field: 'uri',
+          values: [],
+        },
+        {
+          field: 'commonmodule',
+          values: ['Code Repository'],
+        },
+      ],
+      mobile: null,
+      role: null,
+    }
+  ),
+  true,
+  true
+);
+
+Coveo.TemplateCache.registerTemplate(
+  'ResultWithoutImage-STO',
   Coveo.HtmlTemplate.fromString(
     createStringFromTemplate(baseTemplate, {
       imageCell: withoutImage,
@@ -880,15 +976,15 @@ Coveo.TemplateCache.registerTemplate(
     }),
     {
       condition: null,
-      layout: "list",
+      layout: 'list',
       fieldsToMatch: [
         {
-          field: "uri",
+          field: 'uri',
           values: [],
         },
         {
-          field: "commonmodule",
-          values: ["Security Testing Orchestration"],
+          field: 'commonmodule',
+          values: ['Security Testing Orchestration'],
         },
       ],
       mobile: null,
@@ -900,7 +996,7 @@ Coveo.TemplateCache.registerTemplate(
 );
 
 Coveo.TemplateCache.registerTemplate(
-  "ResultWithoutImage-SRM",
+  'ResultWithoutImage-SRM',
   Coveo.HtmlTemplate.fromString(
     createStringFromTemplate(baseTemplate, {
       imageCell: withoutImage,
@@ -910,15 +1006,15 @@ Coveo.TemplateCache.registerTemplate(
     }),
     {
       condition: null,
-      layout: "list",
+      layout: 'list',
       fieldsToMatch: [
         {
-          field: "uri",
+          field: 'uri',
           values: [],
         },
         {
-          field: "commonmodule",
-          values: ["Service Reliability Management"],
+          field: 'commonmodule',
+          values: ['Service Reliability Management'],
         },
       ],
       mobile: null,
@@ -930,7 +1026,7 @@ Coveo.TemplateCache.registerTemplate(
 );
 
 Coveo.TemplateCache.registerTemplate(
-  "ResultWithoutImage-Platform",
+  'ResultWithoutImage-Platform',
   Coveo.HtmlTemplate.fromString(
     createStringFromTemplate(baseTemplate, {
       imageCell: withoutImage,
@@ -940,15 +1036,15 @@ Coveo.TemplateCache.registerTemplate(
     }),
     {
       condition: null,
-      layout: "list",
+      layout: 'list',
       fieldsToMatch: [
         {
-          field: "uri",
+          field: 'uri',
           values: [],
         },
         {
-          field: "commonmodule",
-          values: ["Harness Platform"],
+          field: 'commonmodule',
+          values: ['Harness Platform'],
         },
       ],
       mobile: null,
@@ -958,6 +1054,8 @@ Coveo.TemplateCache.registerTemplate(
   true,
   true
 );
+
+/* @categoryname with image */
 
 /* ---------- Results Without Image - FirstGen Docs 
 
@@ -994,7 +1092,7 @@ Coveo.TemplateCache.registerTemplate(
 
 // Defult template for results without featured images
 Coveo.TemplateCache.registerTemplate(
-  "ResultWithoutImage",
+  'ResultWithoutImage',
   Coveo.HtmlTemplate.fromString(
     createStringFromTemplate(baseTemplate, {
       imageCell: withoutImage,
@@ -1004,10 +1102,10 @@ Coveo.TemplateCache.registerTemplate(
     }),
     {
       condition: null,
-      layout: "list",
+      layout: 'list',
       fieldsToMatch: [
         {
-          field: "uri",
+          field: 'uri',
           values: [],
         },
       ],
