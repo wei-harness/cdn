@@ -1,7 +1,7 @@
-const regexp = /#{([^{]+)}/g;
+const regexpCoveo = /#{([^{]+)}/g;
 function createStringFromTemplate(str, rplc) {
-  return str.replace(regexp, function (ignore, key) {
-    return (key = rplc[key]) == null ? '' : key;
+  return str.replace(regexpCoveo, function (ignore, key) {
+    return (key = rplc[key]) == null ? "" : key;
   });
 }
 const baseTemplate = `
