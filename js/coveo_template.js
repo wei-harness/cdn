@@ -1,4 +1,4 @@
-if (typeof coveoRegexp !== 'undefined') {
+if (typeof coveoRegexp === 'undefined') {
   const coveoRegexp = /#{([^{]+)}/g;
   function createStringFromTemplate(str, rplc) {
     return str.replace(coveoRegexp, function (ignore, key) {
