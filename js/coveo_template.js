@@ -69,6 +69,7 @@ if (typeof coveoRegexp === 'undefined') {
   const CoveoFieldValueIACM = ' CoveoFieldValueIACM';
   const CoveoFieldValueGitness = ' CoveoFieldValueGitness';
   const CoveoFieldValueCR = ' CoveoFieldValueCR';
+  const CoveoFieldValueDBDevOps = ' CoveoFieldValueDBDevOps';
   const CoveoFieldValuePlatform = ' CoveoFieldValuePlatform';
 
   const CoveoFieldValueFirstGen = ' CoveoFieldValueFirstGen';
@@ -519,6 +520,36 @@ if (typeof coveoRegexp === 'undefined') {
           {
             field: 'commonmodule',
             values: ['Harness Platform'],
+          },
+        ],
+        mobile: null,
+        role: null,
+      }
+    ),
+    true,
+    true
+  );
+
+  Coveo.TemplateCache.registerTemplate(
+    'ResultWithImage-DBDevOps',
+    Coveo.HtmlTemplate.fromString(
+      createStringFromTemplate(baseTemplate, {
+        imageCell: withImage,
+        moduleClassName: CoveoFieldValueDBDevOps,
+        imagePlaceHolder: imagePlaceHolder,
+        tagFieldName: tagName,
+      }),
+      {
+        condition: null,
+        layout: 'list',
+        fieldsToMatch: [
+          {
+            field: 'featuredimage',
+            values: [],
+          },
+          {
+            field: 'commonmodule',
+            values: ['Database DevOps'],
           },
         ],
         mobile: null,
@@ -1016,6 +1047,36 @@ if (typeof coveoRegexp === 'undefined') {
           {
             field: 'commonmodule',
             values: ['Service Reliability Management'],
+          },
+        ],
+        mobile: null,
+        role: null,
+      }
+    ),
+    true,
+    true
+  );
+
+  Coveo.TemplateCache.registerTemplate(
+    'ResultWithoutImage-DBDevOps',
+    Coveo.HtmlTemplate.fromString(
+      createStringFromTemplate(baseTemplate, {
+        imageCell: withoutImage,
+        moduleClassName: CoveoFieldValueDBDevOps,
+        imagePlaceHolder: withoutImage,
+        tagFieldName: tagName,
+      }),
+      {
+        condition: null,
+        layout: 'list',
+        fieldsToMatch: [
+          {
+            field: 'uri',
+            values: [],
+          },
+          {
+            field: 'commonmodule',
+            values: ['Database DevOps'],
           },
         ],
         mobile: null,
