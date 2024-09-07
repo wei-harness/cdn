@@ -70,6 +70,9 @@ if (typeof coveoRegexp === 'undefined') {
   const CoveoFieldValueGitness = ' CoveoFieldValueGitness';
   const CoveoFieldValueCR = ' CoveoFieldValueCR';
   const CoveoFieldValueDBDevOps = ' CoveoFieldValueDBDevOps';
+  const CoveoFieldValueAR = ' CoveoFieldValueAR';
+  const CoveoFieldValueCDE = ' CoveoFieldValueCDE';
+  const CoveoFieldValueArmory = ' CoveoFieldValueArmory';
   const CoveoFieldValuePlatform = ' CoveoFieldValuePlatform';
 
   const CoveoFieldValueFirstGen = ' CoveoFieldValueFirstGen';
@@ -550,6 +553,97 @@ if (typeof coveoRegexp === 'undefined') {
           {
             field: 'commonmodule',
             values: ['Database DevOps'],
+          },
+        ],
+        mobile: null,
+        role: null,
+      }
+    ),
+    true,
+    true
+  );
+
+  Coveo.TemplateCache.registerTemplate(
+    'ResultWithImage-AR',
+    Coveo.HtmlTemplate.fromString(
+      createStringFromTemplate(baseTemplate, {
+        imageCell: withImage,
+        moduleClassName: CoveoFieldValueAR,
+        imagePlaceHolder: imagePlaceHolder,
+        tagFieldName: tagName,
+      }),
+      {
+        condition: null,
+        layout: 'list',
+        fieldsToMatch: [
+          {
+            field: 'featuredimage',
+            values: [],
+          },
+          {
+            field: 'commonmodule',
+            values: ['Artifact Registry'],
+          },
+        ],
+        mobile: null,
+        role: null,
+      }
+    ),
+    true,
+    true
+  );
+
+  Coveo.TemplateCache.registerTemplate(
+    'ResultWithImage-CDE',
+    Coveo.HtmlTemplate.fromString(
+      createStringFromTemplate(baseTemplate, {
+        imageCell: withImage,
+        moduleClassName: CoveoFieldValueCDE,
+        imagePlaceHolder: imagePlaceHolder,
+        tagFieldName: tagName,
+      }),
+      {
+        condition: null,
+        layout: 'list',
+        fieldsToMatch: [
+          {
+            field: 'featuredimage',
+            values: [],
+          },
+          {
+            field: 'commonmodule',
+            values: ['Cloud Development Environments'],
+          },
+        ],
+        mobile: null,
+        role: null,
+      }
+    ),
+    true,
+    true
+  );
+
+  // Armory
+  Coveo.TemplateCache.registerTemplate(
+    'ResultWithImage-Armory',
+    Coveo.HtmlTemplate.fromString(
+      createStringFromTemplate(baseTemplate, {
+        imageCell: withImage,
+        moduleClassName: CoveoFieldValueArmory,
+        imagePlaceHolder: imagePlaceHolder,
+        tagFieldName: tagName,
+      }),
+      {
+        condition: null,
+        layout: 'list',
+        fieldsToMatch: [
+          {
+            field: 'featuredimage',
+            values: [],
+          },
+          {
+            field: 'commonmodule',
+            values: ['Armory'],
           },
         ],
         mobile: null,
@@ -1077,6 +1171,97 @@ if (typeof coveoRegexp === 'undefined') {
           {
             field: 'commonmodule',
             values: ['Database DevOps'],
+          },
+        ],
+        mobile: null,
+        role: null,
+      }
+    ),
+    true,
+    true
+  );
+
+  Coveo.TemplateCache.registerTemplate(
+    'ResultWithoutImage-AR',
+    Coveo.HtmlTemplate.fromString(
+      createStringFromTemplate(baseTemplate, {
+        imageCell: withoutImage,
+        moduleClassName: CoveoFieldValueAR,
+        imagePlaceHolder: withoutImage,
+        tagFieldName: tagName,
+      }),
+      {
+        condition: null,
+        layout: 'list',
+        fieldsToMatch: [
+          {
+            field: 'uri',
+            values: [],
+          },
+          {
+            field: 'commonmodule',
+            values: ['Artifact Registry'],
+          },
+        ],
+        mobile: null,
+        role: null,
+      }
+    ),
+    true,
+    true
+  );
+
+  Coveo.TemplateCache.registerTemplate(
+    'ResultWithoutImage-CDE',
+    Coveo.HtmlTemplate.fromString(
+      createStringFromTemplate(baseTemplate, {
+        imageCell: withoutImage,
+        moduleClassName: CoveoFieldValueCDE,
+        imagePlaceHolder: withoutImage,
+        tagFieldName: tagName,
+      }),
+      {
+        condition: null,
+        layout: 'list',
+        fieldsToMatch: [
+          {
+            field: 'uri',
+            values: [],
+          },
+          {
+            field: 'commonmodule',
+            values: ['Cloud Development Environments'],
+          },
+        ],
+        mobile: null,
+        role: null,
+      }
+    ),
+    true,
+    true
+  );
+
+  // Armory
+  Coveo.TemplateCache.registerTemplate(
+    'ResultWithoutImage-Armory',
+    Coveo.HtmlTemplate.fromString(
+      createStringFromTemplate(baseTemplate, {
+        imageCell: withoutImage,
+        moduleClassName: CoveoFieldValueArmory,
+        imagePlaceHolder: withoutImage,
+        tagFieldName: tagName,
+      }),
+      {
+        condition: null,
+        layout: 'list',
+        fieldsToMatch: [
+          {
+            field: 'uri',
+            values: [],
+          },
+          {
+            field: 'commonmodule',
+            values: ['Armory'],
           },
         ],
         mobile: null,
